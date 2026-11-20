@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build app and DMG
         run: |
@@ -20,7 +20,7 @@ jobs:
           [[ "$GITHUB_REF" == refs/tags/v* ]] || VERSION="0.0.0-dev"
           VERSION="$VERSION" ./scripts/build.sh
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: SysMon-dmg
           path: build/SysMon.dmg

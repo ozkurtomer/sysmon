@@ -1,0 +1,7 @@
+build/
+.DS_Store
+*.dmg
+*.app
+.build/
+venv/
+__pycache__/

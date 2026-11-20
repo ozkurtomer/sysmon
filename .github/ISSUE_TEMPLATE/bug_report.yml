@@ -1,4 +1,4 @@
-name: "🐞 Bug report / Hata bildirimi"
+name: Bug report - Hata bildirimi
 description: Something isn't working as expected / Beklediğim gibi çalışmıyor
 labels: ["bug"]
 body:
@@ -41,7 +41,9 @@ body:
     id: chip
     attributes:
       label: Mac type / Mac türü
-      options: ["Apple Silicon (M1–M5)", "Intel"]
+      options:
+        - Apple Silicon
+        - Intel
     validations:
       required: true
   - type: textarea

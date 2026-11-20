@@ -17,6 +17,6 @@ body:
     attributes:
       label: Would you like to build it? / Sen yapmak ister misin?
       options:
-        - "Yes, I'd open a PR / Evet, PR açarım"
-        - "Maybe, with some guidance / Belki, biraz yönlendirmeyle"
-        - "No, just an idea / Hayır, sadece fikir"
+        - "Yes - I would open a PR / Evet - PR açarım"
+        - "Maybe - with some guidance / Belki - biraz yönlendirmeyle"
+        - "No - just an idea / Hayır - sadece fikir"

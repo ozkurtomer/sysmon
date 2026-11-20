@@ -1,0 +1,22 @@
+name: "✨ Feature idea / Özellik fikri"
+description: Suggest something new / Yeni bir şey öner
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see? / Ne görmek istersin?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it be useful? / Neden faydalı olur?
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to build it? / Sen yapmak ister misin?
+      options:
+        - "Yes, I'd open a PR / Evet, PR açarım"
+        - "Maybe, with some guidance / Belki, biraz yönlendirmeyle"
+        - "No, just an idea / Hayır, sadece fikir"

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 Questions & ideas / Sorular ve fikirler"
+    url: https://github.com/ozkurtomer/sysmon/discussions
+    about: Ask a question or share an idea / Soru sor veya fikir paylaş
+  - name: "🔒 Security issue / Güvenlik sorunu"
+    url: https://github.com/ozkurtomer/sysmon/security/advisories/new
+    about: Report privately, please don't open a public issue / Özel olarak bildir, herkese açık issue açma

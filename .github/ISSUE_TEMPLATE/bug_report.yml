@@ -1,0 +1,51 @@
+name: "🐞 Bug report / Hata bildirimi"
+description: Something isn't working as expected / Beklediğim gibi çalışmıyor
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! Write in English or Türkçe — both are welcome.
+        Zaman ayırdığın için teşekkürler! İngilizce veya Türkçe yazabilirsin.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / Ne oldu?
+      description: What did you expect, and what did you see instead? / Ne bekliyordun, ne gördün?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Tekrarlama adımları
+      placeholder: |
+        1. Open SysMon
+        2. Click …
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: SysMon version / SysMon sürümü
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version / macOS sürümü
+      placeholder: "macOS 15.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac type / Mac türü
+      options: ["Apple Silicon (M1–M5)", "Intel"]
+    validations:
+      required: true
+  - type: textarea
+    id: shots
+    attributes:
+      label: Screenshots / Ekran görüntüleri
+      description: Drag and drop images here. / Görselleri buraya sürükle.

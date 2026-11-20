@@ -1,0 +1,15 @@
+changelog:
+  exclude:
+    labels: [ignore-for-release]
+    authors: [dependabot]
+  categories:
+    - title: "✨ New / Yenilikler"
+      labels: [enhancement]
+    - title: "🐞 Fixes / Düzeltmeler"
+      labels: [bug]
+    - title: "🌍 Translations / Çeviriler"
+      labels: [translation]
+    - title: "📝 Docs / Dokümantasyon"
+      labels: [documentation]
+    - title: "Other changes / Diğer"
+      labels: ["*"]

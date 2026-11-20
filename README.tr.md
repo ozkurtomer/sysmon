@@ -72,11 +72,25 @@ Etkinlik Monitörü güçlü ama tam bir sayı penceresi. SysMon aynı bilgiyi y
 
 ## Kurulum
 
-1. [Son sürümden](https://github.com/ozkurtomer/sysmon/releases/latest) **`SysMon.dmg`** dosyasını indir.
-2. Aç ve **SysMon**'u **Applications** klasörüne sürükle.
-3. Sadece ilk açılışta: **SysMon'a sağ tık → Aç → Aç**.
+### Seçenek 1 — Tek komut (önerilen)
 
-> SysMon ad-hoc imzalı ama notarize değil (bunun için ücretli Apple Developer hesabı gerekir), bu yüzden macOS bir kez onay ister. Kontrol etmek istersen uygulamanın tamamı [`Sources/`](Sources) içinde ~700 satır Swift — ya da aşağıdan kendin derle.
+**Terminal**'i aç ve yapıştır:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ozkurtomer/sysmon/main/scripts/install.sh | bash
+```
+
+Son sürümü indirir, SysMon'u **Applications**'a kurar ve açar — **güvenlik uyarısı çıkmaz**, çünkü bu yolla inen dosyalara macOS karantina işareti koymaz. Betik [kısa ve okunabilir](scripts/install.sh).
+
+### Seçenek 2 — DMG indir
+
+1. [Son sürümden](https://github.com/ozkurtomer/sysmon/releases/latest) **`SysMon.dmg`** dosyasını indir ve **SysMon**'u **Applications**'a sürükle.
+2. SysMon'u aç. macOS *"Apple, SysMon'un kötü amaçlı yazılım içermediğini doğrulayamadı"* derse **Bitti**'ye tıkla (*Çöp Sepetine Taşı*'ya değil), sonra:
+   - **macOS 15 Sequoia ve sonrası:** Sistem Ayarları → **Gizlilik ve Güvenlik** → *Güvenlik* bölümüne kaydır → SysMon'un yanındaki **Yine de Aç** → parolanla onayla.
+   - **macOS 13–14:** SysMon'a sağ tık → **Aç** → **Aç**.
+   - **Ya da Terminal'de** (her sürümde): `xattr -dr com.apple.quarantine /Applications/SysMon.app`
+
+> **Uyarı neden çıkıyor?** SysMon açık kaynak ve ad-hoc imzalı ama *notarize* değil — Apple yalnızca ücretli Developer hesabı (yılda 99 $) olan uygulamaları notarize eder. Uyarı uygulamanın ne yaptığıyla değil, bu eksik evrakla ilgili. Her satırı [`Sources/`](Sources) içinde okuyabilir ya da aşağıdan kendin derleyebilirsin.
 
 **Gereksinimler:** macOS 13 Ventura veya üzeri · Apple Silicon veya Intel.
 

@@ -2,6 +2,14 @@
 
 All notable changes are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/), versions follow [SemVer](https://semver.org/).
 
+## [1.1.1] — 2026-11-20
+
+### Added
+- One-command installer (`scripts/install.sh`) that avoids the macOS "could not verify" warning
+
+### Fixed
+- Install instructions for macOS 15+, where right-click → Open no longer bypasses Gatekeeper
+
 ## [1.1.0] — 2026-11-20
 
 ### Added

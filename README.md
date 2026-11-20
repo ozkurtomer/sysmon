@@ -72,11 +72,25 @@ Activity Monitor is powerful, but it's a whole window of numbers. SysMon turns t
 
 ## Install
 
-1. Download **`SysMon.dmg`** from the [latest release](https://github.com/ozkurtomer/sysmon/releases/latest).
-2. Open it and drag **SysMon** into **Applications**.
-3. First launch only: **right-click SysMon → Open → Open**.
+### Option 1 — One command (recommended)
 
-> SysMon is ad-hoc signed but not notarized (that requires a paid Apple Developer account), so macOS asks you to confirm once. Prefer to verify? The whole app is ~700 lines of Swift in [`Sources/`](Sources) — or build it yourself below.
+Open **Terminal** and paste:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ozkurtomer/sysmon/main/scripts/install.sh | bash
+```
+
+It downloads the latest release, installs SysMon into **Applications** and launches it — **no security warning**, because files fetched this way aren't quarantined by macOS. The script is [short and readable](scripts/install.sh).
+
+### Option 2 — Download the DMG
+
+1. Download **`SysMon.dmg`** from the [latest release](https://github.com/ozkurtomer/sysmon/releases/latest) and drag **SysMon** into **Applications**.
+2. Open SysMon. If macOS says *"Apple could not verify SysMon is free of malware"*, click **Done** (not *Move to Trash*), then:
+   - **macOS 15 Sequoia and later:** System Settings → **Privacy & Security** → scroll to *Security* → **Open Anyway** next to SysMon → confirm with your password.
+   - **macOS 13–14:** right-click SysMon → **Open** → **Open**.
+   - **Or in Terminal** (any version): `xattr -dr com.apple.quarantine /Applications/SysMon.app`
+
+> **Why the warning?** SysMon is open source and ad-hoc signed, but not *notarized* — Apple only notarizes apps from paid Developer accounts ($99/year). The warning is about that missing paperwork, not about what the app does. You can read every line in [`Sources/`](Sources), or build it yourself below.
 
 **Requirements:** macOS 13 Ventura or later · Apple Silicon or Intel.
 
